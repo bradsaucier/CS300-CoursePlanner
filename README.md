@@ -55,7 +55,7 @@ Windows (MSVC multi-config builds place the binary under Debug or Release):
 ```powershell
 cmake -S . -B build
 cmake --build build --config Debug
-.uild\Debug\course_planner.exe
+.build\Debug\course_planner.exe
 ```
 
 When prompted for the input file, enter the CSV filename (example: `courses.csv`) if it is in the current working directory, or provide a relative or absolute path.
@@ -109,7 +109,7 @@ flowchart TD
   H --> I[Print sorted course list]
   H --> J[Lookup and print single course]
   I --> K[Extract keys and sort]
-  J --> L[O(1) average lookup]
+  J --> L["O(1) average lookup"]
 ```
 
 ## Design rationale and complexity
