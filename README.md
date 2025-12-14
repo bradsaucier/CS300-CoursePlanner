@@ -67,7 +67,14 @@ cmake --build build
 1. Lookup structure: hash table with chaining for average case O(1) access by course ID.
 2. Sorted output: gather courses into a vector and sort on demand.
 
-## Academic Integrity and Citation Policy
+## Acknowledgment
+
+This repository contains coursework artifacts produced for SNHU CS-300 (Data Structures and Algorithms) and repackaged here for portfolio review.
+Project One documents the design rationale and data structure tradeoffs.
+Project Two is the implemented C++ course planner that loads course data from CSV, supports lookup by course ID, and prints a sorted course list.
+
+### Academic Integrity and Citation Policy
 
 All work in this repository is my own and was completed in accordance with the Southern New Hampshire University Academic Integrity Policy.
 If you reference or reuse any portion of this work, cite the repository and clearly distinguish original content from derived content.
+
