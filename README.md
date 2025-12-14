@@ -55,7 +55,7 @@ Windows (MSVC multi-config builds place the binary under Debug or Release):
 ```powershell
 cmake -S . -B build
 cmake --build build --config Debug
-.build\Debug\course_planner.exe
+.\build\Debug\course_planner.exe
 ```
 
 When prompted for the input file, enter the CSV filename (example: `courses.csv`) if it is in the current working directory, or provide a relative or absolute path.
@@ -169,43 +169,52 @@ Full writeup:
 
 This section answers the CS-300 Module Eight journal prompts and provides context for future review.
 
-What was the problem you were solving in the projects for this course?
+### What was the problem you were solving in the projects for this course?
+
 The core problem was building an advising support tool that can load course data from a CSV file, store it in memory, and provide two user-facing outputs: a full course list sorted alphanumerically by course number, and a single course view that includes its prerequisite course IDs.
 
 Project One required analyzing runtime and memory tradeoffs across candidate data structures (vector, hash table, and binary search tree) to justify an implementation choice. Project Two required turning that analysis into working, testable C++ code that behaves predictably under normal and bad inputs.
 
-How did you approach the problem? Consider why data structures are important to understand.
+### How did you approach the problem? Consider why data structures are important to understand.
+
 I approached the work by starting with required operations and their expected frequency, then selecting a structure that optimizes the dominant operation rather than optimizing everything equally.
 
 In this tool, the dominant operation is lookup by course number. That lookup is used for direct queries and for prerequisite validation. A hash table provides average O(1) lookup, which keeps interactive use responsive and makes the validation pass efficient. The requirement for sorted output is addressed separately by extracting keys and sorting on demand, paying O(n log n) only when the user requests the sorted list.
 
 This reinforced why data structures matter: the structure choice directly affects performance, complexity of implementation, and how easy it is to extend the program later. Choosing the right structure up front reduces both runtime cost and code risk.
 
-How did you overcome any roadblocks you encountered while going through the activities or project?
+### How did you overcome any roadblocks you encountered while going through the activities or project?
+
 Most roadblocks came from input quality and control flow safety.
 
 CSV parsing issues: whitespace drift, missing fields, and inconsistent formatting can break key matching.
 
 Mitigation: normalize course IDs (trim and consistent casing), reject malformed lines early, and continue safely.
+
 BOM and invisible characters: UTF-8 byte order mark artifacts can corrupt the first token in a file.
 
 Mitigation: detect and strip BOM so the first course ID is correct.
+
 Prerequisite integrity: prerequisites may reference courses that appear later in the file (forward references) or may reference courses that do not exist.
 
 Mitigation: load all courses first, then run a post-load referential integrity check that reports warnings without crashing.
+
 User input handling: invalid menu selections should not poison the input stream or crash the program.
 
 Mitigation: read menu choices by line and parse integers cleanly; handle invalid input with a safe message and re-prompt.
+
 These steps turned fragile failure modes into controlled behavior and kept the program predictable to operate.
 
-How has your work on this project expanded your approach to designing software and developing programs?
+### How has your work on this project expanded your approach to designing software and developing programs?
+
 This work strengthened my habit of designing from requirements and failure modes instead of coding directly toward the happy path.
 
 Project One required me to justify decisions using complexity and operational constraints, not intuition. Project Two made those tradeoffs visible by forcing an implementation that had to handle real input issues, produce correct outputs, and remain understandable to someone reviewing the code later.
 
 I also became more systematic in debugging and iteration: isolate the failure, reproduce it reliably, apply the smallest safe change, and re-test the full flow (load, validate, print list, print single course).
 
-How has your work on this project evolved the way you write programs that are maintainable, readable, and adaptable?
+### How has your work on this project evolved the way you write programs that are maintainable, readable, and adaptable?
+
 I focused on code that can be maintained by someone other than the author:
 
 Separation of concerns: parsing, storage, validation, sorting, and output are handled in distinct functions.
@@ -224,7 +233,10 @@ See [CITATION.cff](./CITATION.cff).
 
 ## About the author
 
-Bradley Saucier
+Bradley Saucier, SMSgt, USAF (Ret.)
+B.S. Candidate, Computer Science (STEM Project Management), Southern New Hampshire University
+B.A., Columbia University
+A.A.S., Community College of the Air Force
 
 ## Academic integrity
 
