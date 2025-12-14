@@ -67,3 +67,7 @@ cmake --build build
 1. Lookup structure: hash table with chaining for average case O(1) access by course ID.
 2. Sorted output: gather courses into a vector and sort on demand.
 
+## Academic Integrity and Citation Policy
+
+All work in this repository is my own and was completed in accordance with the Southern New Hampshire University Academic Integrity Policy.
+If you reference or reuse any portion of this work, cite the repository and clearly distinguish original content from derived content.
