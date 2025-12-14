@@ -56,12 +56,6 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build
 ./build/course_planner
 ```
-
-## Data files
-
-1. data/ABCU_Advising_Program_Input.csv - course catalog used for the assignment (if included in your repo).
-2. data/sample_courses.csv - sanitized sample dataset suitable for public viewing and quick tests (if included in your repo).
-
 ## Program use
 
 1. Start the program.
