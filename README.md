@@ -1,4 +1,15 @@
+[![ci](https://github.com/bradsaucier/CS300-CoursePlanner/actions/workflows/ci.yml/badge.svg)](https://github.com/bradsaucier/CS300-CoursePlanner/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # CS 300 - Data Structures and Algorithms
+
+**Author**  
+Bradley Saucier, SMSgt, USAF (Ret.)  
+B.S. Candidate, Computer Science (STEM Project Management), Southern New Hampshire University  
+B.A., Columbia University  
+A.A.S., Community College of the Air Force  
+
+---
 
 ## Portfolio artifact
 
