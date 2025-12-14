@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it."
+type: software
+title: "CS300 CoursePlanner"
+authors:
+  - family-names: "Saucier"
+    given-names: "Bradley"
+repository-code: "https://github.com/bradsaucier/CS300-CoursePlanner"
+version: 1.0.0
+date-released: 2025-12-13
