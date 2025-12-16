@@ -233,9 +233,9 @@ See [CITATION.cff](./CITATION.cff).
 
 ## About the author
 
-Bradley Saucier, SMSgt, USAF (Ret.)
-B.S. Candidate, Computer Science (STEM Project Management), Southern New Hampshire University
-B.A., Columbia University
+Bradley Saucier, SMSgt, USAF (Ret.)  
+B.S. Candidate, Computer Science (STEM Project Management), Southern New Hampshire University  
+B.A., Columbia University  
 A.A.S., Community College of the Air Force
 
 ## Academic integrity
